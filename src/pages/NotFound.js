@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const NotFound = () => {
   return (
-    <div>NotFound</div>
-  )
-}
+    <div>
+      <img src="https://colibriwp.com/blog/wp-content/uploads/2019/07/2488756.jpg"></img>
+    </div>
+  );
+};
 
-export default NotFound
+export default NotFound;

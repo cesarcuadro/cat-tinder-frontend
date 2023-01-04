@@ -1,6 +1,7 @@
 .App {
   text-align: center;
 }
+
 .div1 {
   position: absolute;
   bottom: 1px;
@@ -46,4 +47,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+.footer {
+  position: absolute;
+  bottom: 1px;
+  margin-left: 10px;
+  text-align: center;
+  background-color: white;
 }

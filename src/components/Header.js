@@ -27,12 +27,13 @@ function Header(args) {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Profile
-                <img
+              <NavLink href="/components/">
+                Profile
+                {/* <img
                   src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
                   alt="Gangsta cat,reppin da gang"
                   className= ""
-                />
+                /> */}
               </NavLink>
             </NavItem>
             <NavItem>
@@ -42,7 +43,7 @@ function Header(args) {
               <DropdownToggle nav caret>
                 Options
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu end>
                 <DropdownItem>Dark mode</DropdownItem>
                 <DropdownItem>Light mode</DropdownItem>
                 <DropdownItem divider />

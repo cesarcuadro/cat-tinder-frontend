@@ -12,6 +12,19 @@ import { Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
 
 const App = () => {
+  const createCat = (cat) => {
+    fetch("http://localhost:3000/cats", {
+      body: JSON.stringify(cat),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    })
+      .then((responce) => Response.json())
+      .then((payload) => readCat())
+      .catch((errors) => console.log("Cat create errors:", errors));
+  };
+
   const [cats, setCats] = useState(mockCats);
   return (
     <>

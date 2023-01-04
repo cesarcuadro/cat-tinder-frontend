@@ -13,21 +13,6 @@ import React, { useState } from "react";
 
 const App = () => {
   const [cats, setCats] = useState(mockCats);
-  const createCat = (cat) => {
-    // fetch("http://localhost:3000/cats", {
-    //   // converts the object to a string that can be passed in the request
-    //   body: JSON.stringify(cat),
-    //   // specify the info being sent in JSON and the info returning should be JSON
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   },
-    //   // HTTP verb so the correct endpoint is invoked on the server
-    //   method: "POST"
-    // })
-    //   .then((response) => response.json())
-    //   .then((payload) => readCat())
-    //   .catch((errors) => console.log("Cat create errors:", errors))
-  };
   return (
     <>
       <Header />

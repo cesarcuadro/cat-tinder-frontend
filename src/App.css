@@ -1,7 +1,15 @@
 .App {
   text-align: center;
 }
+.card {
+  margin: 2rem 0;
+}
 
+.cat-index-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .div1 {
   position: absolute;
   bottom: 1px;
@@ -49,7 +57,7 @@
   }
 }
 .footer {
-  position: absolute;
+  position: -webkit-sticky;
   bottom: 1px;
   margin-left: 10px;
   text-align: center;

@@ -10,7 +10,6 @@ const CatNew = ({ createCat }) => {
     enjoys: "",
     image: "",
   });
-
   const handleChange = (e) => {
     setNewCat({ ...newCat, [e.target.name]: e.target.value });
   };
@@ -19,7 +18,6 @@ const CatNew = ({ createCat }) => {
     createCat(newCat);
     navigate("/catindex");
   };
-
   return (
     <>
       <Form>

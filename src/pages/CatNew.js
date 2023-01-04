@@ -10,7 +10,6 @@ const CatNew = ({ createCat }) => {
     enjoys: "",
     image: "",
   });
-  console.log(newCat);
   const handleChange = (e) => {
     setNewCat({ ...newCat, [e.target.name]: e.target.value });
   };

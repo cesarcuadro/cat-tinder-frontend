@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { useNavigate } from "react-router-dom";
 
-const CatNew = () => {
+const CatNew = ({ createCat }) => {
+  const navigate = useNavigate();
   const [newCat, setNewCat] = useState({
     name: "",
     age: "",
@@ -11,6 +13,11 @@ const CatNew = () => {
 
   const handleChange = (e) => {
     setNewCat({ ...newCat, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = () => {
+    createCat(newCat);
+    navigate("/catindex");
   };
 
   return (
@@ -56,7 +63,7 @@ const CatNew = () => {
             type="url"
           />
         </FormGroup>
-        <Button>Submit</Button>
+        <Button onClick={handleSubmit}>Submit</Button>
       </Form>
     </>
   );

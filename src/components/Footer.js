@@ -2,9 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div class="div1">
-      ---------------CatTinder/ By Anthony Ramirez & Cesar Cuadro / LEARN
-      Academy @copyright------------------------
+    <div className="footer">
+      <p>2023 | Ramirez | Cesar | LEARN Academy</p>
     </div>
   );
 };

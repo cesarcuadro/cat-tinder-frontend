@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.AppBackground {
+  background-color: rgb(57, 209, 11);
 }
 .card {
   margin: 2rem 0;

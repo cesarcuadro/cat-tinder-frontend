@@ -11,7 +11,7 @@ const CatNew = ({ createCat }) => {
     image: "",
   });
   const handleChange = (e) => {
-    setNewCat({ ...newCat, [e.target.name]: e.target.value });
+    setNewCat({...newCat, [e.target.name]: e.target.value});
   };
 
   const handleSubmit = () => {
@@ -29,6 +29,7 @@ const CatNew = ({ createCat }) => {
             onChange={handleChange}
             placeholder="What is your name?"
             type="text"
+            value={newCat.name}
           />
         </FormGroup>
         <FormGroup>
@@ -39,16 +40,18 @@ const CatNew = ({ createCat }) => {
             onChange={handleChange}
             placeholder="What is your age?"
             type="number"
+            value={newCat.age}
           />
         </FormGroup>
         <FormGroup>
           <Label for="exampleEnjoy">Enjoys</Label>
           <Input
             // id="name"
-            name="Enjoys"
+            name="enjoys"
             onChange={handleChange}
             placeholder="What do you enjoy?"
             type="text"
+            value={newCat.enjoys}
           />
         </FormGroup>
         <FormGroup>
@@ -59,9 +62,10 @@ const CatNew = ({ createCat }) => {
             onChange={handleChange}
             placeholder="post a Selfie?"
             type="url"
+            value={newCat.image}
           />
         </FormGroup>
-        <Button onClick={handleSubmit}>Submit</Button>
+        <Button onClick={handleSubmit} name="submit">Submit</Button>
       </Form>
     </>
   );

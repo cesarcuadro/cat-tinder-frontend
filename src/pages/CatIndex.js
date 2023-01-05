@@ -15,6 +15,7 @@ const CatIndex = ({ cats }) => {
       {cats?.map((cat, index) => {
         return (
           <>
+          <div className="card-index-cards">
             <Card
               color="light"
               style={{
@@ -32,6 +33,7 @@ const CatIndex = ({ cats }) => {
                 </NavLink>
               </CardBody>
             </Card>
+            </div>
           </>
         );
       })}

@@ -6,6 +6,7 @@ const CatShow = ({ cats }) => {
   const { id } = useParams();
   const cat = cats?.find((cat) => cat.id === +id);
   return (
+    <div className="card-index-cards ">
     <Card
       color="light"
       style={{
@@ -21,6 +22,7 @@ const CatShow = ({ cats }) => {
         <CardText>{cat.enjoys}</CardText>
       </CardBody>
     </Card>
+    </div>
   );
 };
 

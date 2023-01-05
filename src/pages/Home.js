@@ -1,8 +1,9 @@
 import React from "react";
+import "../App.css";
 
 const Home = () => {
   return (
-    <div className="cat-index-cards">
+    <div className="cat-index-cards ">
       <img
         src="https://d.newsweek.com/en/full/2158159/inseparable-cats-melts-hearts-online.jpg"
         height="1000px"

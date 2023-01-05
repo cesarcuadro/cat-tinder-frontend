@@ -4,13 +4,14 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  CardText,
   Button,
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
+import "../App.css";
 
 const CatIndex = ({ cats }) => {
   return (
+    <div className="body">
     <main>
       {cats?.map((cat, index) => {
         return (
@@ -20,6 +21,8 @@ const CatIndex = ({ cats }) => {
               color="light"
               style={{
                 width: "18rem",
+                marginLeft: "auto",
+                marginRight: "auto"
               }}
             >
               <img alt="Sample" src={cat.image} />
@@ -38,6 +41,7 @@ const CatIndex = ({ cats }) => {
         );
       })}
     </main>
+    </div>
   );
 };
 

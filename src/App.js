@@ -11,6 +11,7 @@ import { Routes, Route } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 
 const App = () => {
+
   const [ cats, setCats ] = useState([])
   useEffect(() => {
     readCat();
@@ -34,7 +35,6 @@ const createCat = (cat) => {
     .catch((error) => console.log(error))
 }
 
-
   return (
     <>
       <Header />
@@ -42,7 +42,7 @@ const createCat = (cat) => {
         <Route path="/" element={<Home />} />
         <Route path="/catindex" element={<CatIndex cats={cats} />} />
         <Route path="/catshow/:id" element={<CatShow cats={cats} />} />
-        <Route path="/catnew" element={<CatNew createCat={createCat}/>} />
+        <Route path="/catnew" element={<CatNew createCat={createCat} />} />
         <Route path="/catedit" element={<CatEdit />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

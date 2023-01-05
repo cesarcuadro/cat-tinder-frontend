@@ -1,12 +1,11 @@
 .App {
   text-align: center;
 }
-
 .card {
   margin: 2rem 0;
 }
 
-.card-index-cards {
+.cat-index-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

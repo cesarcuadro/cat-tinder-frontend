@@ -1,27 +1,39 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap";
+import "../App.css";
 
 const CatShow = ({ cats }) => {
   const { id } = useParams();
   const cat = cats?.find((cat) => cat.id === +id);
   return (
-    <div className="card-index-cards ">
-    <Card
-      color="light"
-      style={{
-        width: "18rem",
+    <div>
+      <img src={cat.image}
+      style= {{
+        display: "flex",
+        alignItems: "center",
+        height: "500px",
+        marginLeft: "auto",
+        marginRight: "auto"
       }}
-    >
-      <img alt="Sample" src={cat.image} />
-      <CardBody>
-        <CardTitle tag="h5">{cat.name}</CardTitle>
-        <CardSubtitle className="mb-2 text-muted" tag="h6">
-          {cat.age}
-        </CardSubtitle>
-        <CardText>{cat.enjoys}</CardText>
-      </CardBody>
-    </Card>
+      ></img>
+      <h1 style={{
+        display: "flex",
+        textAlign: "center",
+        flexDirection: "column",
+        backgroundColor: "rgb(57, 209, 11)"
+      }}>Name: {cat.name}</h1>
+      <h3 style={{
+        display: "flex",
+        textAlign: "center",
+        flexDirection: "column",
+        backgroundColor: "rgb(57, 209, 11)"
+      }}>Age: {cat.age}</h3>
+      <h2 style={{
+        display: "flex",
+        textAlign: "center",
+        flexDirection: "column",
+        backgroundColor: "rgb(57, 209, 11)"
+      }}>About me: {cat.enjoys}</h2>
     </div>
   );
 };

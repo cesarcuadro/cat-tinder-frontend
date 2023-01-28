@@ -11,7 +11,7 @@ const CatNew = ({ createCat }) => {
     image: "",
   });
   const handleChange = (e) => {
-    setNewCat({...newCat, [e.target.name]: e.target.value});
+    setNewCat({ ...newCat, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = () => {
@@ -65,7 +65,9 @@ const CatNew = ({ createCat }) => {
             value={newCat.image}
           />
         </FormGroup>
-        <Button onClick={handleSubmit} name="submit">Submit</Button>
+        <Button onClick={handleSubmit} name="submit">
+          Submit
+        </Button>
       </Form>
     </>
   );

@@ -35,6 +35,19 @@ const createCat = (cat) => {
     .catch((error) => console.log(error))
 }
 
+const updateCat = (cat, id) => {
+  fetch(`http://localhost:3000/cats/${id}`, {
+    body: JSON.stringify(cat),
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method: "PATCH"
+  })
+    .then((response) => response.json())
+    .then((payload) => readCat(payload))
+    .catch((errors) => console.log("Cat update errors:", errors))
+}
+
   return (
     <>
       <Header />
@@ -43,7 +56,7 @@ const createCat = (cat) => {
         <Route path="/catindex" element={<CatIndex cats={cats} />} />
         <Route path="/catshow/:id" element={<CatShow cats={cats} />} />
         <Route path="/catnew" element={<CatNew createCat={createCat} />} />
-        <Route path="/catedit" element={<CatEdit />} />
+        <Route path="/catedit/:id" element={<CatEdit cats={cats} updateCat={updateCat} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

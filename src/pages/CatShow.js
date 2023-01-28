@@ -1,40 +1,49 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "../App.css";
+import {
+  Card,
+  CardImg,
+  CardBody,
+  CardTitle,
+  CardText,
+  Button
+} from "reactstrap";
+import { NavLink } from "react-router-dom";
 
 const CatShow = ({ cats }) => {
   const { id } = useParams();
-  const cat = cats?.find((cat) => cat.id === +id);
+  const currentCat = cats?.find((cat) => cat.id === +id);
   return (
-    <div>
-      <img src={cat.image}
-      style= {{
-        display: "flex",
-        alignItems: "center",
-        height: "500px",
-        marginLeft: "auto",
-        marginRight: "auto"
+<>
+  <Card className="my-2">
+    <CardImg
+      alt="Card image cap"
+      src={currentCat.image}
+      style={{
+        height: 180
       }}
-      ></img>
-      <h1 style={{
-        display: "flex",
-        textAlign: "center",
-        flexDirection: "column",
-        backgroundColor: "rgb(57, 209, 11)"
-      }}>Name: {cat.name}</h1>
-      <h3 style={{
-        display: "flex",
-        textAlign: "center",
-        flexDirection: "column",
-        backgroundColor: "rgb(57, 209, 11)"
-      }}>Age: {cat.age}</h3>
-      <h2 style={{
-        display: "flex",
-        textAlign: "center",
-        flexDirection: "column",
-        backgroundColor: "rgb(57, 209, 11)"
-      }}>About me: {cat.enjoys}</h2>
-    </div>
+      top
+      width="100%"
+    />
+    <CardBody>
+      <CardTitle tag="h5">
+        {currentCat.name}
+      </CardTitle>
+      <CardText>
+        {currentCat.enjoys}
+      </CardText>
+      <CardText>
+        <small className="text-muted">
+          {currentCat.age}
+        </small>
+      </CardText>
+    </CardBody>
+    <NavLink to={`/catedit/${currentCat.id}`} className="nav-link">
+    <Button>Edit</Button>
+</NavLink>
+  </Card>
+</>
   );
 };
 
